@@ -1,0 +1,99 @@
+@import '../../styles/colors';
+
+.item-card {
+  width: 100%;
+
+  .item-image {
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 3rem;
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    .item-card-counter, .add-to-cart {
+      position: absolute;
+      bottom: -1.3rem;
+      transform: translate(-50%, 0);
+      left: 50%;
+      border-radius: 2rem;
+    }
+  
+    .item-card-counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: map-get($colors, red);
+      border: 1px solid map-get($colors, red);
+      color: map-get($colors, rose-50);
+      width: 65%;
+  
+      .increment, .decrement {
+        border-radius: 50%;
+        border: 1px solid map-get($colors, rose-50);
+        padding: 5px;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: map-get($colors, red);
+        transition: all 0.13s;
+    
+        .inc-dec {
+          width: auto;
+        }
+  
+        &:hover {
+          background-color: map-get($colors, rose-50);
+        }
+      }
+  
+      .count {
+        font-size: 1.6rem;
+      }
+    }
+  
+    .add-to-cart {
+      padding: 1rem 2rem;
+      border: 1px solid map-get($colors, red);
+      background-color: map-get($colors, rose-50);
+      color: map-get($colors, rose-900);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 65%;
+    }
+  }
+
+  .item-details {
+    line-height: 22px;
+    .item-category {
+      color: map-get($colors, rose-400);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .item-name {
+      font-size: 1.7rem;
+      color: map-get($colors, rose-500);
+      font-weight: 700;
+    }
+
+    .item-price {
+      font-size: 1.7rem;
+      color: map-get($colors, red);
+      font-weight: 700;
+    }
+  }
+}

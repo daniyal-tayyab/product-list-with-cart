@@ -1,0 +1,148 @@
+@import '../../styles/colors';
+
+.dashboard {
+  display: flex;
+  gap: 3rem;
+
+  &__main-content {
+    flex: 3;
+    .dasboard-header {
+      margin-bottom: 2rem;
+      .dashboard-title {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__sidebar {
+    flex: 1;
+    padding: 2rem;
+    background-color: map-get($colors, rose-50);
+    border-radius: 8px;
+    height: fit-content;
+
+    .title {
+      font-size: 3rem;
+      color: map-get($colors, red);
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .empty-cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        color: map-get($colors, rose-400);
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .cart-item {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid map-get($colors, rose-300);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .item-left {
+          .item-name {
+            font-size: 1.6rem;
+            color: map-get($colors, rose-500);
+            font-weight: 500;
+          }
+          .item-states {
+            display: flex;
+            .item-quantity {
+              margin-right: 1.5rem;
+              color: map-get($colors, red);
+              font-size: 1.5rem;
+              font-weight: 700;
+            }
+
+            .item-rate {
+              margin-right: 0.8rem;
+              color: map-get($colors, rose-400);
+              font-size: 1.5rem;
+              font-weight: 400;
+            }
+
+            .item-total {
+              color: map-get($colors, rose-500);
+              font-size: 1.5rem;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .item-right {
+          .icon-cover {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            border: 1px solid map-get($colors, rose-400);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .cart-total {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .total-label {
+          font-size: 1.6rem;
+          color: map-get($colors, rose-500);
+        }
+        .total-price {
+          font-size: 3rem;
+          color: map-get($colors, rose-500);
+          font-weight: 700;
+        }
+      }
+      .carbon-delivery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 1rem;
+        background-color: map-get($colors, rose-100);
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+
+        p {
+          font-size: 1.6rem;
+          color: map-get($colors, rose-500);
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .confirm-button {
+        padding: 1rem;
+        border-radius: 8rem;
+        background-color: map-get($colors, red);
+        color: map-get($colors, rose-50);
+        font-size: 1.6rem;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
